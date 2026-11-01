@@ -8,5 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: './', // Menggunakan path relatif agar aman di Vercel MAUPUN GitHub Pages
+  base: '/TirtaJaga/', // Mengunci alamat assets ke sub-folder GitHub Pages
 })
