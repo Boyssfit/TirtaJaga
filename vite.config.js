@@ -8,5 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/TirtaJaga/',
+  base: './', // Menggunakan path relatif agar aman di Vercel MAUPUN GitHub Pages
 })

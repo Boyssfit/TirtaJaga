@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function StatCard({ title, value, subtitle, icon: Icon, isNavy = false, badgeColor = 'text-emerald-400' }) {
   if (isNavy) {
     return (

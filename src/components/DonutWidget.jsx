@@ -1,7 +1,6 @@
-import React from 'react';
 import { Send } from 'lucide-react';
 
-export default function DonutWidget() {
+export default function DonutWidget({ onOpenModal }) {
   return (
     <div className="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex flex-col justify-between">
       <div>
@@ -52,7 +51,10 @@ export default function DonutWidget() {
         </div>
       </div>
 
-      <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold text-xs py-3 rounded-xl transition shadow-md flex items-center justify-center gap-2 mt-4">
+      <button
+        onClick={onOpenModal}
+        className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold text-xs py-3 rounded-xl transition shadow-md flex items-center justify-center gap-2 mt-4 cursor-pointer"
+      >
         <Send className="w-3.5 h-3.5" />
         Buat Laporan Baru
       </button>
