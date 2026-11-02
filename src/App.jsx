@@ -22,7 +22,7 @@ export default function App() {
   ]);
 
   return (
-    <div className="flex h-screen bg-[#eaf0f6] text-slate-700 font-sans selection:bg-orange-500 selection:text-white overflow-hidden">
+    <div className="flex h-dvh min-h-0 bg-[#eaf0f6] text-slate-700 font-sans selection:bg-orange-500 selection:text-white overflow-hidden">
       <Sidebar
         user={user}
         onOpenLogin={() => {
