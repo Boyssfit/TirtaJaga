@@ -51,10 +51,10 @@ export default function Sidebar({ user, onOpenLogin, onLogout, activeTab, setAct
   return (
     <>
     {isOpen && <button type="button" aria-label="Tutup menu" onClick={onClose} className="fixed inset-0 bg-slate-950/50 z-20 lg:hidden" />}
-    <aside className={`fixed inset-y-0 left-0 z-30 w-64 bg-[#152e4d] text-white flex flex-col justify-between p-6 shadow-xl shrink-0 transition-transform duration-200 lg:relative lg:translate-x-0 ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
-      <div>
+    <aside className={`fixed inset-y-0 left-0 z-30 w-64 max-h-dvh overflow-hidden bg-[#152e4d] text-white flex flex-col justify-between p-6 shadow-xl shrink-0 transition-transform duration-200 lg:relative lg:translate-x-0 ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+      <div className="flex min-h-0 flex-1 flex-col">
         {/* Profile Header */}
-        <div className="flex flex-col items-center text-center my-4">
+        <div className="flex shrink-0 flex-col items-center text-center my-4">
           <div className="w-20 h-20 rounded-full bg-[#0d1f35] border-4 border-[#22446e] flex items-center justify-center shadow-md mb-3">
             <div className={`w-12 h-12 rounded-full bg-[#1e406d] flex items-center justify-center ${badge.color}`}>
               <IconHeader className="w-7 h-7" />
@@ -69,7 +69,7 @@ export default function Sidebar({ user, onOpenLogin, onLogout, activeTab, setAct
         </div>
 
         {/* Login / Logout Button */}
-        <div className="mb-6">
+        <div className="mb-6 shrink-0">
           {user ? (
             <button
               onClick={onLogout}
@@ -88,7 +88,7 @@ export default function Sidebar({ user, onOpenLogin, onLogout, activeTab, setAct
         </div>
 
         {/* Dynamic Navigation Items */}
-        <nav className="space-y-1.5 text-slate-300">
+        <nav className="min-h-0 flex-1 overflow-y-auto overscroll-contain space-y-1.5 text-slate-300">
           {navItems.map((item) => {
             const ItemIcon = item.icon;
             const isActive = activeTab === item.id;
@@ -111,7 +111,7 @@ export default function Sidebar({ user, onOpenLogin, onLogout, activeTab, setAct
         </nav>
       </div>
 
-      <div className="pt-4 border-t border-[#20416b]/50 text-[10px] text-slate-400 text-center">
+      <div className="shrink-0 pt-4 border-t border-[#20416b]/50 text-[10px] text-slate-400 text-center">
         AquaWatch Tirta Jaga v1.0
       </div>
     </aside>
