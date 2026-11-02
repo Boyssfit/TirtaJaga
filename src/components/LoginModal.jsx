@@ -18,7 +18,7 @@ export default function LoginModal({ isOpen, onClose, onLoginSuccess }) {
     } else if (email === 'pemerintah@gmail.com' && password === 'pemerintah123') {
       onLoginSuccess({ email, role: 'pemerintah', name: 'DINAS LHK BADUNG', detail: 'Command Center Tim Kab.' });
       onClose();
-    } else if (email === 'perusahaan@gmail.com' && password === 'pemerintah123') {
+    } else if (email === 'perusahaan@gmail.com' && password === 'perusahaan123') {
       onLoginSuccess({ email, role: 'perusahaan', name: 'CLIFF RESORT & SPA', detail: 'Kawasan Bukit Jimbaran' });
       onClose();
     } else {
@@ -90,7 +90,7 @@ export default function LoginModal({ isOpen, onClose, onLoginSuccess }) {
           <p className="font-semibold text-sky-300">Contoh Akun Demo:</p>
           <p>• Warga: <code className="text-white">warga@gmail.com</code> / <code className="text-white">warga123</code></p>
           <p>• Pemerintah: <code className="text-white">pemerintah@gmail.com</code> / <code className="text-white">pemerintah123</code></p>
-          <p>• Perusahaan: <code className="text-white">perusahaan@gmail.com</code> / <code className="text-white">pemerintah123</code></p>
+          <p>• Perusahaan: <code className="text-white">perusahaan@gmail.com</code> / <code className="text-white">perusahaan123</code></p>
         </div>
       </div>
     </div>
